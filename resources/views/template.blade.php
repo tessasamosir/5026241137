@@ -23,13 +23,16 @@
                         <a class="nav-link active" href="/pegawai">Pegawai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 1</a>
+                        <a class="nav-link active" href="/unggas">Unggas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 2</a>
+                        <a class="nav-link" href="/E5">E5</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PR 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Siswa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>

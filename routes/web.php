@@ -5,6 +5,8 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\UnggasDbController;
+use App\Http\Controllers\E5DbController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -70,3 +72,16 @@ Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+Route::get('/unggas', [UnggasDbController::class, 'index']);
+Route::get('/unggas/tambah', [UnggasDbController::class, 'tambah']);
+Route::post('/unggas/store', [UnggasDbController::class, 'store']);
+Route::get('/unggas/edit/{id}', [UnggasDbController::class, 'edit']);
+Route::post('/unggas/update', [UnggasDbController::class, 'update']);
+Route::get('/unggas/hapus/{id}', [UnggasDbController::class, 'hapus']);
+Route::get('/unggas/cari', [UnggasDbController::class, 'cari']);
+
+Route::get('/E5', [E5DbController::class, 'index']);
+Route::get('/E5/tambah', [E5DbController::class, 'tambah']);
+Route::post('/E5/store', [E5DbController::class, 'store']);
