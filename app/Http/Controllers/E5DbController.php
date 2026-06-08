@@ -9,12 +9,25 @@ class E5DbController extends Controller
 {
     public function index()
     {
-        // mengambil data dari table unggas
-        $nilaikuliah = DB::table('nilaikuliah')->get();
+    $nilaikuliah = DB::table('nilaikuliah')->get();
 
-        // mengirim data unggas ke view index
-        return view('nilaikuliah.index', ['nilaikuliah' => $nilaikuliah]);
+    foreach ($nilaikuliah as $n) {
+
+        if ($n->NilaiAngka <= 40) {
+            $n->NilaiHuruf = 'D';
+        } elseif ($n->NilaiAngka <= 60) {
+            $n->NilaiHuruf = 'C';
+        } elseif ($n->NilaiAngka <= 80) {
+            $n->NilaiHuruf = 'B';
+        } else {
+            $n->NilaiHuruf = 'A';
+        }
+
+        $n->Bobot = $n->NilaiAngka * $n->SKS;
     }
+
+    return view('nilaikuliah.index', ['nilaikuliah' => $nilaikuliah]);
+}
 
     // method untuk menampilkan view form tambah unggas
     public function tambah()

@@ -6,15 +6,21 @@
     <br />
     <table class="table table-striped table-hover">
         <tr>
-            <th>NRP</th>
-            <th>Nilai Angka</th>
-            <th>SKS</th>
+        <th>ID</th>
+        <th>NRP</th>
+        <th>Nilai Angka</th>
+        <th>Nilai Huruf</th>
+        <th>SKS</th>
+        <th>Bobot</th>
         </tr>
         @foreach ($nilaikuliah as $n)
             <tr>
-                <td>{{ $n->NRP }}</td>
-                <td>{{ $n->NilaiAngka }}</td>
-                <td>{{ $n->SKS }}</td>
+            <td>{{ $n->ID }}</td>
+            <td>{{ $n->NRP }}</td>
+            <td>{{ $n->NilaiAngka }}</td>
+            <td>{{ $n->NilaiHuruf }}</td>
+            <td>{{ $n->SKS }}</td>
+            <td>{{ $n->Bobot }}</td>
             </tr>
         @endforeach
     </table>
