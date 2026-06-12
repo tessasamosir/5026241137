@@ -29,10 +29,10 @@
                         <a class="nav-link" href="/E5">E5</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 3</a>
+                        <a class="nav-link" href="/D4">D4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Siswa</a>
+                        <a class="nav-link" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>

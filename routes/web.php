@@ -7,6 +7,9 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\UnggasDbController;
 use App\Http\Controllers\E5DbController;
+use App\Http\Controllers\D4DbController;
+use App\Http\Controllers\SiswaController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -85,3 +88,16 @@ Route::get('/unggas/cari', [UnggasDbController::class, 'cari']);
 Route::get('/E5', [E5DbController::class, 'index']);
 Route::get('/E5/tambah', [E5DbController::class, 'tambah']);
 Route::post('/E5/store', [E5DbController::class, 'store']);
+
+Route::get('/D4', [D4DbController::class, 'index']);
+Route::get('/D4/beli', [D4DbController::class, 'beli']);
+Route::post('/D4/store', [D4DbController::class, 'store']);
+Route::get('/D4/batal/{id}', [D4DbController::class, 'hapus']);
+
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
