@@ -22,3 +22,4 @@ class UnggasController extends Controller
         ", <br>Tersedia : " . $tersedia;
     }
 }
+

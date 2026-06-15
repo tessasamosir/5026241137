@@ -9,6 +9,7 @@ use App\Http\Controllers\UnggasDbController;
 use App\Http\Controllers\E5DbController;
 use App\Http\Controllers\D4DbController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\mypegawaiDbController;
 
 
 Route::get('/', function () {
@@ -101,3 +102,7 @@ Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.e
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
 
+Route::get('/eas', [mypegawaiDbController::class, 'index']);
+Route::get('/eas/tambah', [mypegawaiDbController::class, 'tambah']);
+Route::post('/eas/store', [mypegawaiDbController::class, 'store']);
+Route::get('/eas/view/{kodepegawai}', [mypegawaiDbController::class, 'view']);
